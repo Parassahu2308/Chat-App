@@ -74,7 +74,7 @@ const Register = () => {
             <img src={Add} alt="" />
             <span>Add an avator</span>
           </label>
-          <button>Register</button>
+          <button disabled={loading}>Register</button>
           {err && <span>Something went wrong</span>}
         </form>
         <p>
