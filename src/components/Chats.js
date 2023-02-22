@@ -30,6 +30,7 @@ const Chats = () => {
     dispatch({ type: "CHANGE_USER", payload: u });
   };
 
+  // ?.sort((a, b) => b[1].date - a[1].date)
   return (
     <div className="chats">
       {Object.entries(chats)
@@ -43,7 +44,7 @@ const Chats = () => {
             <img src={chat[1].userInfo.photoURL} alt="" />
             <div className="userChatInfo">
               <span>{chat[1].userInfo.displayName}</span>
-              <p>{chat[1].userInfo.lastMessage?.text}</p>
+              <p>{chat[1].lastMessage?.text}</p>
             </div>
           </div>
         ))}

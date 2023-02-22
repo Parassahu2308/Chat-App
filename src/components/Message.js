@@ -6,11 +6,16 @@ const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+  // console.log("mmm:", message);
+
   const ref = useRef();
 
   useEffect(() => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
+
+  // `message ${message.senderId === currentUser.uid && "owner"}`
+  // ref={ref}
 
   return (
     <div
