@@ -11,7 +11,7 @@ import {
   updateDoc,
   serverTimestamp,
 } from "firebase/firestore";
-import { AuthContext } from "../context/authContext";
+import { AuthContext } from "../context/AuthContext";
 
 const Search = () => {
   const [username, setUsername] = useState("");
